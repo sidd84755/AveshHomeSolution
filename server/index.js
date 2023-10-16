@@ -2,7 +2,7 @@ import express from 'express';
 import  * as dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './mongodb/connect.js';
-// import taskRouter from './routes/task.routes.js';
+import taskRouter from './routes/task.routes.js';
 
 dotenv.config();
 
@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.send({ message: 'Server running' });
 })
 
-// app.use('/api/v1/tasks', taskRouter);
+app.use('/api/v1/tasks', taskRouter);
 
 const startServer = async () => {
     try {

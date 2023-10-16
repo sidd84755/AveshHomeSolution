@@ -10,6 +10,6 @@ const TaskSchema = new mongoose.Schema({
     photo: { type: String, required: true},
 });
 
-const taskModel = mongoose.model('Task', TaskSchema);
+const taskModel = mongoose.model('Products', TaskSchema);
 
 export default taskModel;
